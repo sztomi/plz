@@ -19,3 +19,11 @@ class Env:
   @_env("PLZ_SCRIPTS_PATH")
   def scripts_path():
     pass
+
+  @_env("PLZ_LOCAL_SCRIPTS_PATH")
+  def local_scripts_path():
+    pass
+
+  @_env("PLZ_IGNORE_DOTENV", default=False, var_type=bool)
+  def ignore_dotenv():
+    pass

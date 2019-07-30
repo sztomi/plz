@@ -1,7 +1,7 @@
 import sys
 
 from pretty_plz.env import Env
-from pretty_plz.brain import pretty_plzBrain
+from pretty_plz.brain import PlzBrain
 from pretty_plz.return_codes import ReturnCodes
 from pretty_plz.exceptions import CommandNotFound
 
@@ -18,7 +18,7 @@ def main():
   args = parser.parse_args()
 
   try:
-    brain = pretty_plzBrain(args.command)
+    brain = PlzBrain(args.command)
     resolved_cmd = brain.find_command()
     import subprocess
     proc = subprocess.run([*resolved_cmd, *args.cli])
