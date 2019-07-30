@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "pretty_plz"
-version = "0.1.5"
+version = "0.1.6"
 description = "pretty_plz is a tool that turns utility scripts into runnable commands"
 authors = ["Tamás Szelei <szelei.t@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/sztomi/pretty_plz/"
-repository = "https://github.com/sztomi/pretty_plz/"
+homepage = "https://github.com/sztomi/plz/"
+repository = "https://github.com/sztomi/plz/"
 keywords = ["productivity", "commandline", "cli"]
 classifiers = [
     "Environment :: Console",
