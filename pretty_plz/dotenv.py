@@ -56,3 +56,5 @@ class DotEnv:
       dotenv.apply()
     except RuntimeError:
       pass
+    except FileNotFoundError:
+      pass
