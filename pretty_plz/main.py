@@ -13,9 +13,17 @@ def main():
 
   from argparse import ArgumentParser, REMAINDER
   parser = ArgumentParser()
-  parser.add_argument("command")
+  parser.add_argument("-v", "--version", action="store_true", help="Display version.")
+  parser.add_argument("command", nargs="?")
   parser.add_argument("cli", nargs=REMAINDER)
   args = parser.parse_args()
+
+  if args.version:
+    from pretty_plz.version_info import print_version
+    print_version()
+
+  if args.command is None:
+    sys.exit(ReturnCodes.SUCCESS)
 
   try:
     brain = PlzBrain(args.command)
